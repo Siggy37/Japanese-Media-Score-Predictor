@@ -1,5 +1,5 @@
 # Japanese-Media-Score-Predictor
 A web app which can predict the score of any japanese anime
-Funtional, yet still a work in progress
+Functional, yet still a work in progress
 
 
