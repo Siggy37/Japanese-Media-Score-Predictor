@@ -1,0 +1,282 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Anime Score Predictor</title>
+{% endblock %}
+
+{% block body %}
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">Anime Score Predictor</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="{{ url_for('index') }}">Home</a></li>
+                <li ><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="showcase">
+    <section id="showcase">
+        <div class="container">
+            <h1>
+              Find out if an anime is worth your time  
+            </h1>
+            <p></p>
+        </div>
+        <img src="{{ url_for('static', filename='showcase4.jpg') }}" width=100%>
+    </section>
+</section>
+<div class="content">
+    <h1>Fill in the following, then Submit!</h1>
+
+    <form action="/" method="POST">
+        <input type="text" placeholder="title" name="title" id="content">
+        
+        <select type="text" placeholder="genre" name="genre" id="content" multiple>
+            <option value="acrobatics" >acrobatics</option>
+            <option value="action" >action</option>
+            <option value="adoption" >adoption</option>
+            <option value="adventure" >adventure</option>
+            <option value="aircraft" >aircraft</option>
+            <option value="alchemy" >alchemy</option>
+            <option value="aliens" >aliens</option>
+            <option value="alternate history" >alternate history</option>
+            <option value="alternate reality" >alternate reality</option>
+            <option value="amnesia" >amnesia</option>
+            <option value="androids" >androids</option>
+            <option value="angels" >angels</option>
+            <option value="animation production" >animation production</option>
+            <option value="animators" >animators</option>
+            <option value="another world" >another world</option>
+            <option value="artificial intelligence" >artificial intelligence</option>
+            <option value="assassins" >assassins</option>
+            <option value="augmented reality" >augmented reality</option>
+            <option value="auto racing" >auto racing</option>
+            <option value="ballet" >ballet</option>
+            <option value="baseball" >baseball</option>
+            <option value="basketball" >basketball</option>
+            <option value="bishojo" >bishojo</option>
+            <option value="bishoujo" >bishoujo</option>
+            <option value="bishounen" >bishounen</option>
+            <option value="bounty hunters" >bounty hunters</option>
+            <option value="burning manly passion" >burning manly passion</option>
+            <option value="butterfly effect" >butterfly effect</option>
+            <option value="cafe" >cafe</option>
+            <option value="café" >café</option>
+            <option value="card games" >card games</option>
+            <option value="cat girls" >cat girls</option>
+            <option value="catgirls" >catgirls</option>
+            <option value="college" >college</option>
+            <option value="comedy" >comedy</option>
+            <option value="coming of age" >coming of age</option>
+            <option value="computers" >computers</option>
+            <option value="conspiracy" >conspiracy</option>
+            <option value="crime" >crime</option>
+            <option value="crime organizations" >crime organizations</option>
+            <option value="cross dressing" >cross dressing</option>
+            <option value="crossdressing" >crossdressing</option>
+            <option value="cyberpunk" >cyberpunk</option>
+            <option value="cyborgs" >cyborgs</option>
+            <option value="dark comedy" >dark comedy</option>
+            <option value="death" >death</option>
+            <option value="deforestation" >deforestation</option>
+            <option value="delinquents" >delinquents</option>
+            <option value="delivery service" >delivery service</option>
+            <option value="demons" >demons</option>
+            <option value="detectives" >detectives</option>
+            <option value="developing powers" >developing powers</option>
+            <option value="disaster" >disaster</option>
+            <option value="dog girls" >dog girls</option>
+            <option value="dolls" >dolls</option>
+            <option value="dragons" >dragons</option>
+            <option value="drama" >drama</option>
+            <option value="dreams" >dreams</option>
+            <option value="duels" >duels</option>
+            <option value="earthquake" >earthquake</option>
+            <option value="economics" >economics</option>
+            <option value="england" >england</option>
+            <option value="environmentalism" >environmentalism</option>
+            <option value="espers" >espers</option>
+            <option value="fairy tales" >fairy tales</option>
+            <option value="family" >family</option>
+            <option value="fan service" >fan service</option>
+            <option value="fanservice" >fanservice</option>
+            <option value="fantasy" >fantasy</option>
+            <option value="female warriors" >female warriors</option>
+            <option value="fighting" >fighting</option>
+            <option value="fine arts" >fine arts</option>
+            <option value="folklore" >folklore</option>
+            <option value="forest spirits" >forest spirits</option>
+            <option value="foxgirls" >foxgirls</option>
+            <option value="future" >future</option>
+            <option value="gangs" >gangs</option>
+            <option value="gender switch" >gender switch</option>
+            <option value="genres" >genres</option>
+            <option value="ghosts" >ghosts</option>
+            <option value="giant robots" >giant robots</option>
+            <option value="girls with guns" >girls with guns</option>
+            <option value="girls with weapons" >girls with weapons</option>
+            <option value="goddesses" >goddesses</option>
+            <option value="gods" >gods</option>
+            <option value="golf" >golf</option>
+            <option value="gore" >gore</option>
+            <option value="gothic" >gothic</option>
+            <option value="gothic lolita" >gothic lolita</option>
+            <option value="growing up" >growing up</option>
+            <option value="gunslinger" >gunslinger</option>
+            <option value="gymnastics" >gymnastics</option>
+            <option value="harem" >harem</option>
+            <option value="high school" >high school</option>
+            <option value="hikikomori" >hikikomori</option>
+            <option value="historical" >historical</option>
+            <option value="historical (england)" >historical (england)</option>
+            <option value="homunculi" >homunculi</option>
+            <option value="horror" >horror</option>
+            <option value="host club" >host club</option>
+            <option value="human weapons" >human weapons</option>
+            <option value="idols" >idols</option>
+            <option value="immortal" >immortal</option>
+            <option value="immortality" >immortality</option>
+            <option value="kendo" >kendo</option>
+            <option value="life after death" >life after death</option>
+            <option value="literature" >literature</option>
+            <option value="living dolls" >living dolls</option>
+            <option value="lolicon" >lolicon</option>
+            <option value="love polygon" >love polygon</option>
+            <option value="love rectangle" >love rectangle</option>
+            <option value="love triangle" >love triangle</option>
+            <option value="mafia" >mafia</option>
+            <option value="magic" >magic</option>
+            <option value="magic book" >magic book</option>
+            <option value="magical boy" >magical boy</option>
+            <option value="magical creatures" >magical creatures</option>
+            <option value="magical girl" >magical girl</option>
+            <option value="magical girlfriend" >magical girlfriend</option>
+            <option value="maids" >maids</option>
+            <option value="male harem" >male harem</option>
+            <option value="martial arts" >martial arts</option>
+            <option value="mecha" >mecha</option>
+            <option value="mermaids" >mermaids</option>
+            <option value="microbiology" >microbiology</option>
+            <option value="middle ages" >middle ages</option>
+            <option value="military" >military</option>
+            <option value="mind control" >mind control</option>
+            <option value="moe" >moe</option>
+            <option value="monsters" >monsters</option>
+            <option value="multiple personality" >multiple personality</option>
+            <option value="music" >music</option>
+            <option value="mutants" >mutants</option>
+            <option value="mystery" >mystery</option>
+            <option value="mythology" >mythology</option>
+            <option value="neet" >neet</option>
+            <option value="ninja" >ninja</option>
+            <option value="noir" >noir</option>
+            <option value="occult" >occult</option>
+            <option value="online computer gaming" >online computer gaming</option>
+            <option value="otaku" >otaku</option>
+            <option value="parallel universe" >parallel universe</option>
+            <option value="parenting" >parenting</option>
+            <option value="parody" >parody</option>
+            <option value="perverted female character" >perverted female character</option>
+            <option value="pirates" >pirates</option>
+            <option value="police" >police</option>
+            <option value="politics" >politics</option>
+            <option value="post-apocalyptic" >post-apocalyptic</option>
+            <option value="priests and priestesses" >priests and priestesses</option>
+            <option value="psychics" >psychics</option>
+            <option value="psychological" >psychological</option>
+            <option value="quantum physics" >quantum physics</option>
+            <option value="racing" >racing</option>
+            <option value="real robot" >real robot</option>
+            <option value="religion" >religion</option>
+            <option value="ren'ai" >ren'ai</option>
+            <option value="revenge" >revenge</option>
+            <option value="robot girl" >robot girl</option>
+            <option value="robotics" >robotics</option>
+            <option value="robots" >robots</option>
+            <option value="romance" >romance</option>
+            <option value="samurai" >samurai</option>
+            <option value="school" >school</option>
+            <option value="school life" >school life</option>
+            <option value="science fiction" >science fiction</option>
+            <option value="secret agents" >secret agents</option>
+            <option value="secret organizations" >secret organizations</option>
+            <option value="seiyuu" >seiyuu</option>
+            <option value="sentai" >sentai</option>
+            <option value="shinigami" >shinigami</option>
+            <option value="shoujo-ai" >shoujo-ai</option>
+            <option value="shounen-ai" >shounen-ai</option>
+            <option value="single parents" >single parents</option>
+            <option value="slice of life" >slice of life</option>
+            <option value="social-networking" >social-networking</option>
+            <option value="society" >society</option>
+            <option value="space" >space</option>
+            <option value="space navy" >space navy</option>
+            <option value="space western" >space western</option>
+            <option value="special abilities" >special abilities</option>
+            <option value="spirits" >spirits</option>
+            <option value="sports" >sports</option>
+            <option value="spy thriller" >spy thriller</option>
+            <option value="steampunk" >steampunk</option>
+            <option value="student teacher relationship" >student teacher relationship</option>
+            <option value="super hero" >super hero</option>
+            <option value="super robot" >super robot</option>
+            <option value="superhero" >superhero</option>
+            <option value="superhumans" >superhumans</option>
+            <option value="supernatural" >supernatural</option>
+            <option value="superpowers" >superpowers</option>
+            <option value="survival game" >survival game</option>
+            <option value="swordplay" >swordplay</option>
+            <option value="swordsman" >swordsman</option>
+            <option value="talking animals" >talking animals</option>
+            <option value="tanuki" >tanuki</option>
+            <option value="technology" >technology</option>
+            <option value="tennis" >tennis</option>
+            <option value="terrorism" >terrorism</option>
+            <option value="terrorists" >terrorists</option>
+            <option value="thriller" >thriller</option>
+            <option value="time travel" >time travel</option>
+            <option value="tournament" >tournament</option>
+            <option value="trading" >trading</option>
+            <option value="tragedy" >tragedy</option>
+            <option value="traveling" >traveling</option>
+            <option value="treasure hunting" >treasure hunting</option>
+            <option value="tsundere" >tsundere</option>
+            <option value="twins" >twins</option>
+            <option value="unrequited love" >unrequited love</option>
+            <option value="vampires" >vampires</option>
+            <option value="virtual reality" >virtual reality</option>
+            <option value="war" >war</option>
+            <option value="western" >western</option>
+            <option value="witches" >witches</option>
+            <option value="wizards" >wizards</option>
+            <option value="wizards/witches" >wizards/witches</option>
+            <option value="wolf girls" >wolf girls</option>
+            <option value="world war ii" >world war ii</option>
+            <option value="yakuza" >yakuza</option>
+            <option value="zombies" >zombies</option>
+        </select>
+        <select type="text" placeholder="platform" name="platform" id="content">
+            <option value="TV" >TV</option>
+            <option value="OAV">OAV</option>
+            <Option value="movie">movie</Option>
+            <option value="special">special</option>
+            <option value="ONA">ONA</option>
+            
+        </select> 
+        <input type="text" name="summary" placeholder = "summary" id="content">
+        
+        <input type="submit" value="Get Projected Score">
+    </form>
+</div>
+
+<footer>
+    <p>Siggy37, Copyright &copy; 2019</p>
+</footer>
+
+
+{% endblock %}

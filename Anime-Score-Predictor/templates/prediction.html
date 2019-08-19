@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Score Prediction</title>
+{% endblock %}
+
+
+{% block body %}
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">Anime Score Predictor</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li class="current"><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section id="result">
+    <div id="prediction">
+        <p>{{ result }}</p>
+        <img src="{{ url_for('static', filename='kaneki.png') }}" width = 1000px>
+    </div>
+</section>
+
+
+{% endblock %}

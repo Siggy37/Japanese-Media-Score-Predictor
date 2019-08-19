@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block head %}
+<title>Score Prediction</title>
+{% endblock %}
+
+
+{% block body %}
+<header>
+    <div class="container">
+        <div id="branding">
+            <h1><span class="highlight">Anime Score Predictor</span></h1>
+        </div>
+        <nav>
+            <ul>
+                <li ><a href="{{ url_for('index') }}">Home</a></li>
+                <li class="current"><a href="{{ url_for('about') }}">About</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+
+
+
+
+
+{% endblock %}
